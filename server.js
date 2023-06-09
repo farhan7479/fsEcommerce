@@ -19,12 +19,12 @@ const __dirname=path.dirname(__filename);
 const app = express();
 
 //middelwares
-const corsOption= { 
-    origin:"http://localhost:3000",
-    optionSuccessStatus: 200,
-};
+// const corsOption= { 
+//     origin:"http://localhost:3000",
+//     optionSuccessStatus: 200,
+// };
 
-app.use(cors(corsOption));
+app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname,"./frontend/build")));
